@@ -1,5 +1,7 @@
 # raspberry-pi-scripts
-python programs that can run in pi3
+Python programs that can run on pi3
 
 ## Installation
+cd /home/pi/raspberry-pi-scripts
+
 pip3 install python-dotenv
