@@ -13,10 +13,6 @@
 # 模拟霍尔传感器实验，通过GPIOZero库自带的MCP3008 10位模数转换库直接控制，采集到模拟霍尔传感器的模拟值，从而判断磁性物质！！！<br>
 
 # ## 1.导入必要的库文件
-
-# In[ ]:
-
-
 from gpiozero import PWMLED, MCP3008
 from gpiozero.tools import absoluted, scaled
 from signal import pause
@@ -24,18 +20,10 @@ from time import sleep
 
 
 # ## 2.定义使用通道
-
-# In[ ]:
-
-
 makerobo_hall = MCP3008(channel=0) # 定义电位器获取ADC值通道
 
 
 # ## 3.定义打印
-
-# In[ ]:
-
-
 # 打印出磁场的信息
 def makerobo_Print(x):
 	if x == 0:    #  没有磁场
@@ -59,10 +47,6 @@ def makerobo_Print(x):
 
 
 # ## 4.循环函数
-
-# In[ ]:
-
-
 def MAP(x, in_min, in_max, out_min, out_max):
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
@@ -85,20 +69,10 @@ def makerobo_loop():
 
 
 # ## 5.主程序
-
-# In[ ]:
-
-
 # 程序入口
 if __name__ == '__main__':		
 	try:
 		makerobo_loop() # 调用循环函数
 	except KeyboardInterrupt:  	# 当按下Ctrl+C时，将执行destroy()子程序。
-		destroy()   # 调用释放函数
-
-
-# In[ ]:
-
-
-
-
+		#destroy()   # 调用释放函数
+		pass

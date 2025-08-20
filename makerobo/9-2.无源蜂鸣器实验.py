@@ -1,21 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# <center><img src="./image/CLBLOGO.jpg" alt="创乐博" style="width: 300px;"/></center>
-# 
+ 
 # # 9-2.无源蜂鸣器实验
-# 
-# @－－－－湖南创乐博智能科技有限公司－－－－<br>
-# @  文件名：9-2.无源蜂鸣器实验.py <br>
-# @  版本：V2.0 <br>
-# @  author: zhulin<br>
 # @  说明：无源蜂鸣器实验<br>
 # 无源蜂鸣器实验，通过GPIOZero库的TonalBuzzer专用音频合成库直接驱动无源蜂鸣器发出具有频率信息的声音！！！<br>
 
 # ## 1.导入必要的库文件
-
-# In[ ]:
-
 
 from gpiozero import TonalBuzzer
 from gpiozero.tones import Tone
@@ -25,16 +15,10 @@ from signal import pause
 
 # ## 2.定义无源蜂鸣器管脚
 
-# In[ ]:
-
-
 makerobo_Buzzer = 17    # 有源蜂鸣器管脚定义
 
 
 # ## 3.音谱定义
-
-# In[ ]:
-
 
 # 音谱定义
 Tone_CL = [220, 220, 220, 220, 220, 220, 220, 248]		# 低C音符的频率
@@ -67,9 +51,6 @@ makerobo_beat_2 = [	1, 1, 2, 2, 1, 1, 2, 2,
 
 # ## 3.初始化工作
 
-# In[ ]:
-
-
 # GPIO设置函数
 def makerobo_setup():
     global bz
@@ -78,9 +59,6 @@ def makerobo_setup():
 
 
 # ## 4.功能函数
-
-# In[ ]:
-
 
 # 循环函数
 def makerobo_loop():
@@ -103,9 +81,6 @@ def makerobo_destory():
 
 # ## 5.主程序
 
-# In[ ]:
-
-
 # 程序入口
 if __name__ == '__main__':		
 	makerobo_setup()
@@ -113,10 +88,3 @@ if __name__ == '__main__':
 		makerobo_loop()
 	except KeyboardInterrupt:  	# 当按下Ctrl+C时，将执行destroy()子程序。
 		makerobo_destory()      # 释放资源
-
-
-# In[ ]:
-
-
-
-

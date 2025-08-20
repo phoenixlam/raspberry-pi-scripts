@@ -24,20 +24,12 @@ from time import sleep
 
 
 # ## 2.定义使用通道
-
-# In[ ]:
-
-
 pot_x = MCP3008(channel=0) # 定义PS2操纵杆对应的X方向管脚
 pot_y = MCP3008(channel=1) # 定义PS2操纵杆对应的y方向管脚
 pot_z = MCP3008(channel=2) # 定义PS2操纵杆对应的z方向管脚
 
 
 # ## 3.定义方向函数
-
-# In[ ]:
-
-
 def MAP(x, in_min, in_max, out_min, out_max):
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
@@ -72,9 +64,6 @@ def makerobo_direction():
 
 # ## 4.循环函数
 
-# In[ ]:
-
-
 # 循环函数
 def makerobo_loop():
     makerobo_status = ''    # 状态值赋空值
@@ -89,10 +78,7 @@ def makerobo_loop():
 def destroy():
 	pass
 
-
 # ## 5.主程序
-
-# In[ ]:
 
 
 # 程序入口
@@ -101,10 +87,3 @@ if __name__ == '__main__':
 		makerobo_loop() # 调用循环函数
 	except KeyboardInterrupt:  	# 当按下Ctrl+C时，将执行destroy()子程序。
 		destroy()   # 调用释放函数
-
-
-# In[ ]:
-
-
-
-

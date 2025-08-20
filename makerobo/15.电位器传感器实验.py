@@ -41,7 +41,7 @@ def MAP(x, in_min, in_max, out_min, out_max):
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
 def makerobo_loop():
-    makerobo_status = 1 # 给状态变量赋1值
+
     while True:
         pot_value = round(pot.value * 1000)       # 扩大1000倍，方便读取
         print ('Potentiometer Value:', pot_value) # 获取AIN0上的值，读取电位器模拟量值；
