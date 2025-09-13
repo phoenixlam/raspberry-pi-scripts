@@ -35,8 +35,8 @@ matrix2 = matrix.MatrixBackpack16x8(i2c, address=0x71)
 matrix1.fill(0)
 matrix2.fill(0)
 # 设置闪烁频率和亮度
-display.blink_rate = 3
-display.brightness = 0.5
+#display.blink_rate = 3
+#display.brightness = 0.5
 
 
 # ## 3. 功能函数

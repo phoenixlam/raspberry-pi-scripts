@@ -38,7 +38,7 @@ step_motor1 = Stepper(motor_pins=[17, 18, 19, 20], number_of_steps = number_of_s
 
 
 step_motor1.set_speed(speed)  # 设置速度
-amount_of_gear_reduction = 64
+amount_of_gear_reduction = 64 # Gear ratios?
 number_of_steps_per_revolution_geared_output = number_of_steps * amount_of_gear_reduction
 
 

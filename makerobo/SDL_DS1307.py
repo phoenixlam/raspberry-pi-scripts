@@ -3,7 +3,6 @@ from datetime import datetime
 
 import smbus
 
-
 def _bcd_to_int(bcd):
     """Decode a 2x4bit BCD to a integer.
     """

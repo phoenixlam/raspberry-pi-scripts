@@ -55,8 +55,8 @@ ds1307.write_now()
 # 循环函数
 def makerobo_loop():
     while True:
-        currenttime = datetime.datetime.utcnow()
-        deltatime = currenttime - starttime
+        #currenttime = datetime.datetime.utcnow()
+        #deltatime = currenttime - starttime
         print(" ")
         print("Raspberry Pi=\t" + time.strftime("%Y-%m-%d %H:%M:%S"))
         print("DS1307 RTC =\t20%d-%d-%d %d:%d:%d" 
